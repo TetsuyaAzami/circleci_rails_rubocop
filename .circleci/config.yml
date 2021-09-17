@@ -42,8 +42,8 @@ jobs:
           MYSQL_HOST: 127.0.0.1
       - image: circleci/mysql:5.7
         environment:
-          MYSQL_ROOT_PASSWORD: rootpassword
           MYSQL_DATABASE: circleci_rails_rubocop_test
+          MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
     working_directory: ~/repo
     steps:
       - checkout
